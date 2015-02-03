@@ -18,21 +18,12 @@
 # include <unistd.h>
 # include <string.h>
 
-# define BUFF_SIZE 100
-
 typedef struct		s_list
 {
-	struct s_list	*prev;
-	struct s_list	*next;
-	void			*content;
-}					t_list;
-
-typedef struct		s_root
-{
-	struct s_list	*first;
-	struct s_list	*last;
-	struct s_list	*current;
-}					t_root;
+    struct s_list	*prev;
+    struct s_list	*next;
+    void		*content;
+}			t_list;
 
 /*
 ** STRINGS
@@ -43,8 +34,8 @@ char				**ft_strsplit(char const *s1, char c);
 char				*ft_strtrim(char const *s);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
-int					ft_strequ(char const *s1, char const *s2);
-int					ft_strnequ(char const *s1, char const *s2, size_t n);
+int				ft_strequ(char const *s1, char const *s2);
+int			       	ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strmap(char const *s, char (*f)(char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
@@ -63,24 +54,23 @@ char				*ft_strchr(char const *s, int c);
 char				*ft_strrchr(char const *s, int c);
 char				*ft_strstr(char const *s1, char const *s2);
 char				*ft_strnstr(char const *s1, char const *s2, size_t n);
-int					ft_strcmp(char const *s1, char const *s2);
-int					ft_strncmp(char const *s1, char const *s2, size_t n);
+int				ft_strcmp(char const *s1, char const *s2);
+int			      	ft_strncmp(char const *s1, char const *s2, size_t n);
+int				ft_strcmp_case(char *s1, char *s2);
 
 /*
-** LISTS
+** LIST
 */
 
-t_root				*ft_create_elem(void);
-void				ft_list_push_back(t_root **root, void *content);
-void				ft_list_push_front(t_root **root, void *content);
-void				ft_list_str_display(t_root *root);
-void				ft_list_char_display(t_root *root);
+t_list				*ft_create_elem(void *content);
+int				ft_list_push_back(t_list **list, void *content);
+void				ft_delete_link(t_list **list);
 
 /*
 ** GET NEXT LINE
 */
 
-int					get_next_line(int const fd, char **line);
+int		       		get_next_line(int const fd, char **line);
 char				*ft_strjoin_gnl(char const *s1, char const *s2);
 char				*ft_strdup_gnl(const char *str);
 
@@ -103,7 +93,7 @@ void				ft_putchar_fd(char c, int fd);
 
 void				ft_memdel(void **ad);
 void				*ft_memalloc(size_t size);
-int					ft_memcmp(const void *s1, const void *s2, size_t n);
+int	       			ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 void				*ft_memccpy(void *s1, const void *s2, int c, size_t n);
 void				*ft_memmove(void *s1, const void *s2, size_t n);
@@ -131,7 +121,7 @@ int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_atoi(char const *str);
-char				*ft_itoa(int n);
+char					*ft_itoa(int n);
 
 /*
 ** OTHERS

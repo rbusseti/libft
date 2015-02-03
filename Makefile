@@ -12,19 +12,10 @@
 
 NAME = libft.a
 
-SRC = ft_list_pop_front.c \
-	ft_list_pop_back.c \
-	ft_list_display.c \
-	ft_list_str_display.c \
-	ft_strjoin_char.c \
+SRC = ft_strjoin_char.c \
 	ft_tputs_putchar.c \
 	ft_strdup_gnl.c \
 	ft_strjoin_gnl.c \
-	get_next_line.c \
-	ft_list_char_display.c \
-	ft_list_push_front.c \
-	ft_list_push_back.c \
-	ft_create_elem.c \
 	ft_itoa.c \
 	ft_strsplit.c \
 	ft_strtrim.c \
