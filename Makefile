@@ -12,7 +12,10 @@
 
 NAME = libft.a
 
-SRC = get_next_line.c \
+SRC = list/ft_create_elem.c \
+	list/ft_delete_link.c \
+	list/ft_list_push_back.c \
+	get_next_line.c \
 	ft_strjoin_char.c \
 	ft_tputs_putchar.c \
 	ft_strdup_gnl.c \
