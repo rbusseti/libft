@@ -12,7 +12,8 @@
 
 NAME = libft.a
 
-SRC = ft_strjoin_char.c \
+SRC = get_next_line.c \
+	ft_strjoin_char.c \
 	ft_tputs_putchar.c \
 	ft_strdup_gnl.c \
 	ft_strjoin_gnl.c \
