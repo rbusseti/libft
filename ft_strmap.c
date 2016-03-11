@@ -6,10 +6,11 @@
 /*   By: rbusseti <rbusseti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/28 00:51:35 by rbusseti          #+#    #+#             */
-/*   Updated: 2014/10/12 17:36:10 by rbusseti         ###   ########.fr       */
+/*   Updated: 2016/03/10 14:39:55 by rbusseti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))
@@ -20,7 +21,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 
 	i = 0;
 	j = ft_strlen(s);
-	strnew = malloc(sizeof(char) * (j + 1));
+	if ((strnew = malloc(sizeof(char) * (j + 1))) == NULL)
+		return (NULL);
 	while (i < j)
 	{
 		strnew[i] = (*f)(s[i]);

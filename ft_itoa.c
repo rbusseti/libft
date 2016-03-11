@@ -6,16 +6,18 @@
 /*   By: rbusseti <rbusseti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/29 13:42:42 by rbusseti          #+#    #+#             */
-/*   Updated: 2014/10/12 17:34:47 by rbusseti         ###   ########.fr       */
+/*   Updated: 2016/03/10 14:56:25 by rbusseti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char	*calc_itoa(int n, int i, char *strnew)
 {
 	int		mod;
 
+	strnew[i] = '\0';
 	if (n < 0)
 	{
 		n = n * (-1);

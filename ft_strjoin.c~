@@ -1,23 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbusseti <rbusseti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/26 16:53:44 by rbusseti          #+#    #+#             */
-/*   Updated: 2016/03/10 12:05:06 by rbusseti         ###   ########.fr       */
+/*   Created: 2013/11/28 14:58:38 by rbusseti          #+#    #+#             */
+/*   Updated: 2016/03/10 12:21:58 by rbusseti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if (ap != NULL)
+	int		i;
+	int		j;
+	char	*strnew;
+
+	i = ft_strlen(s1);
+	j = ft_strlen(s2);
+	j = i + j;
+	if ((strnew = malloc(sizeof(char) * (j + 1))) == NULL)
+		return (NULL);
+	strnew = malloc(sizeof(char) * (j + 1));
+	j = 0;
+	while (s1[j] != '\0')
 	{
-		free(*ap);
-		*ap = NULL;
+		strnew[j] = s1[j];
+		j++;
 	}
+	i = 0;
+	while (s2[i] != '\0')
+	{
+		strnew[j] = s2[i];
+		i++;
+		j++;
+	}
+	strnew[j] = '\0';
+	return (strnew);
 }

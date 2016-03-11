@@ -6,10 +6,11 @@
 /*   By: rbusseti <rbusseti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/28 19:41:10 by rbusseti          #+#    #+#             */
-/*   Updated: 2014/10/12 17:37:07 by rbusseti         ###   ########.fr       */
+/*   Updated: 2016/03/10 12:24:55 by rbusseti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 static char	**create_string(char **strnew, char const *s, char c)
@@ -37,7 +38,7 @@ static char	**create_string(char **strnew, char const *s, char c)
 		if (s[i] != '\0')
 			i++;
 	}
-	strnew[k] = '\0';
+	strnew[k] = NULL;
 	return (strnew);
 }
 

@@ -6,7 +6,7 @@
 /*   By: rbusseti <rbusseti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 19:20:33 by rbusseti          #+#    #+#             */
-/*   Updated: 2014/01/25 13:06:51 by rbusseti         ###   ########.fr       */
+/*   Updated: 2016/03/10 14:07:35 by rbusseti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,21 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 
 	if (ft_strlen((char *)s2) == 0)
 		return ((char *)s1);
-	if (ft_strlen((char *)s2) > n)
-		return (NULL);
 	i = 0;
 	j = 0;
 	while (s1[i] && n > 0)
 	{
-		while ((s1[i] == s2[j]) && (s2[j]))
+		while ((s1[i] == s2[j]) && (s1[i] != '\0') && n > 0)
 		{
 			i++;
 			j++;
+			n--;
 		}
-		if (ft_strlen((char *)s2) == j)
+		if (s2[j] == '\0')
 			return ((char *)(s1 + i - j));
-		else
-			i = i - j + 1;
+		i = i - j + 1;
+		n = n + j - 1;
 		j = 0;
-		n--;
 	}
 	return (NULL);
 }

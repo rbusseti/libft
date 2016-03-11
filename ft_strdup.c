@@ -6,10 +6,11 @@
 /*   By: rbusseti <rbusseti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 17:38:51 by rbusseti          #+#    #+#             */
-/*   Updated: 2014/10/12 17:35:11 by rbusseti         ###   ########.fr       */
+/*   Updated: 2016/03/10 11:25:25 by rbusseti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(char const *str)

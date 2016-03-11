@@ -6,10 +6,11 @@
 /*   By: rbusseti <rbusseti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/26 22:01:04 by rbusseti          #+#    #+#             */
-/*   Updated: 2013/11/26 23:11:08 by rbusseti         ###   ########.fr       */
+/*   Updated: 2016/03/10 12:08:08 by rbusseti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 void	ft_strdel(char **as)

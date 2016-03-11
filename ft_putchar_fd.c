@@ -6,10 +6,11 @@
 /*   By: rbusseti <rbusseti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/26 15:26:44 by rbusseti          #+#    #+#             */
-/*   Updated: 2013/11/26 15:42:07 by rbusseti         ###   ########.fr       */
+/*   Updated: 2016/03/10 12:34:38 by rbusseti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)

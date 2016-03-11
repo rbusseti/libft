@@ -6,10 +6,11 @@
 /*   By: rbusseti <rbusseti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/28 15:22:09 by rbusseti          #+#    #+#             */
-/*   Updated: 2013/12/03 16:33:04 by rbusseti         ###   ########.fr       */
+/*   Updated: 2016/03/10 14:57:12 by rbusseti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strtrim(char const *s)
@@ -31,6 +32,8 @@ char	*ft_strtrim(char const *s)
 	if ((i == 0) && (j == len - 1))
 		return ((char *)s);
 	k = j - i + 1;
+	if (k <= 0)
+		k = 0;
 	strnew = ft_strsub(s, i, k);
 	return (strnew);
 }
